@@ -1,0 +1,102 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(231, 223, 223);
+    display: flex; /* lado a lado */
+    flex-wrap: nowrap; /* 🚫 não deixa quebrar para cima/baixo */
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+    overflow-x: auto; /* se faltar espaço, cria rolagem horizontal */
+}
+
+.barra-lateral {
+    flex: 0 0 280px; /* largura fixa */
+    background-color: rgb(183, 209, 189);
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+    height: auto;
+}
+
+.conteudo {
+    flex: 1; /* ocupa espaço restante */
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 20px;
+}
+
+.conteudo h1,
+.conteudo h2,
+.conteudo p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+img {
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+}
+
+.whats {
+    width: 25px;
+    height: 25px;
+}
+
+.email {
+    width: 20px;
+    height: 20px;
+}
+
+/* ajustes de tamanho em telas pequenas */
+@media (max-width: 700px) {
+    .barra-lateral {
+        flex: 0 0 200px; /* diminui a barra */
+    }
+
+    .conteudo {
+        max-width: 100%;
+        padding: 10px;
+        gap: 1rem;
+    }
+
+    img {
+        height: 120px;
+        width: 120px;
+    }
+}
+
+.git,.linkedin{
+    height: 45px;
+    width: 45px;
+    padding: 8px;
+}
+
+.habilidades{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.habilidades li{
+    padding: 8px 0;
+}
+
+.senai, .senai2{
+    width: 250px;
+    height: 200px;
+}
+
+.eventos-container {
+    display: flex;              /* Coloca os itens lado a lado */
+    justify-content: space-between; /* Espaço uniforme entre eles */
+    gap: 20px;                  /* Espaçamento entre os itens */
+}
+
+.eventos-container img {
+    flex: 1;                    /* Cada imagem ocupa espaço igual */
+    max-width: 100%;            /* Garante que não ultrapasse a largura */
+    height: auto;               /* Mantém proporção da imagem */
+}
